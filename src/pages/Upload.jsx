@@ -3,7 +3,7 @@ import React from 'react'
 const Upload = () => {
   return (
     <>
-        <h1>Uploads</h1>
+        <h1 className='font-extrabold'>Uploads</h1>
     </>
   )
 }
