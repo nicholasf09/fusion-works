@@ -1,5 +1,6 @@
 .uploadPage {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +10,7 @@
   background-position: center;
   font-family: "font-utama";
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
 }
