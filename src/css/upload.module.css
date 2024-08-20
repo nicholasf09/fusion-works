@@ -1,6 +1,10 @@
-body {
+.uploadPage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/background/hero-home.jpg);
+    url(/assets/hero-home.jpg);
   background-size: cover;
   background-position: center;
   font-family: "font-utama";
