@@ -1,14 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
-      <h1 className="font-bold">Fusion Works</h1>
-      <p className="m-5 ">Janghyun {">"} kim gimyung</p>
-      <Link to="/uploads">
-        <button className="text-red-50">Go to Uploads</button>
-      </Link>
+      <div className="w-full fixed top-0 left-0 h-[60px] bg-transparent flex justify-between items-center px-[80px]">FusionWorks</div>
     </>
   );
 };
