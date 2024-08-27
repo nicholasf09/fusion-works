@@ -5,6 +5,7 @@ import "./index.css"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home'
 import UploadPage from './pages/Upload'
+import CollectionsPage from './pages/Collections'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/uploads',
     element: <UploadPage />,
+  },
+  {
+    path: '/collections',
+    element: <CollectionsPage />,
   },
 ])
 
