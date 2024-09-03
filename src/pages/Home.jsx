@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import ExhibitionCard from "../components/ExhibitionCard";
 
 const Home = () => {
   return (
@@ -26,6 +27,49 @@ const Home = () => {
           </div>
           <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600" />
         </div>
+      </div>
+
+      <div className="w-full h-full font-serif">
+        <swiper-container
+          navigation-next-el=".custom-next-button"
+          navigation-prev-el=".custom-prev-button"
+          pagination-el=".custom-pagination"
+          space-between="400"
+          slides-per-view="auto"
+          centered-slides="true"
+          pagination="true"
+          pagination-type="fraction"
+          navigation="true"
+          effect="coverflow"
+          coverflow-effect-rotate="0"
+          coverflow-effect-stretch="0"
+          coverflow-effect-depth="100"
+          coverflow-effect-modifier="2.5"
+
+          style={
+            {
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-fraction-color": "#fff",
+
+            }
+          }>
+          <ExhibitionCard></ExhibitionCard>
+          <ExhibitionCard></ExhibitionCard>
+          <ExhibitionCard></ExhibitionCard>
+          <ExhibitionCard></ExhibitionCard>
+          <ExhibitionCard></ExhibitionCard>
+        </swiper-container>
+
+        <div className="flex justify-center text-white mb-10 mt-[-50px]">
+          <div className="custom-prev-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+          </svg></div>
+          <div className="custom-pagination px-10"></div>
+          <div className="custom-next-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+          </svg></div>
+        </div>
+
       </div>
     </>
   );

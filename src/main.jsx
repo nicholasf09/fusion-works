@@ -7,6 +7,11 @@ import HomePage from './pages/Home'
 import UploadPage from './pages/Upload'
 import CollectionsPage from './pages/Collections'
 
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
+
 const router = createBrowserRouter([
   {
     path: '/',
