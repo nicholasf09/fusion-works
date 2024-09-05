@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 const Footer = () => {
 
     return (
-        <div className="w-full h-full bg-yellow-700 text-white py-10 px-[100px] flex flex-col justify-between">
-            <div className="w-full h-full flex items-center">
-                <div className="w-2/5 h-full py-10 pr-20 border-r-2">
+        <div className="w-full h-full bg-yellow-700 text-white py-10 px-[100px] flex flex-col justify-between max-[1280px]:px-10">
+            <div className="w-full h-full flex items-center max-[991px]:flex-col">
+                <div className="w-2/5 h-full py-10 pr-20 border-r-2 max-[991px]:border-0 max-[991px]:w-full max-[991px]:pr-0">
                     <p className="text-md font-bold mb-3">FusionWorks</p>
                     <h1 className="text-3xl font-bold leading-[40px]">Where Art Meets Diversity, Creativity Unites.</h1>
                     <div className="flex gap-3 w-full mt-10 pt-10 border-t-2">
@@ -21,8 +21,8 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-3/5 h-full py-10 pl-20 flex justify-between">
-                    <div>
+                <div className="w-3/5 h-full py-10 pl-20 flex justify-between max-[991px]:w-full max-[991px]:pl-0 max-[991px]:justify-start">
+                    <div className="max-[991px]:pr-20">
                         <p className="text-lg font-semibold mb-3">ABOUT</p>
                         <div className="flex flex-col gap-2">
                             <a href="#" className="hover:underline">Website Profile</a>
@@ -32,7 +32,7 @@ const Footer = () => {
                             <a href="#" className="hover:underline transition-all ease duration-300">What&apos;s Trending Now</a>
                         </div>
                     </div>
-                    <div>
+                    <div className="max-[991px]:pr-20">
                         <p className="text-lg font-semibold mb-3">SUPPORT</p>
                         <div className="flex flex-col gap-2">
                             <a href="#" className="hover:underline transition-all ease duration-300">Legal Notice</a>
@@ -51,7 +51,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full mt-40">
+            <div className="w-full mt-40 max-[991px]:mt-20">
                 <h1 className="text-xl font-bold">&copy; 2024 Fusion Works</h1>
             </div>
         </div>

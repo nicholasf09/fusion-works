@@ -71,3 +71,31 @@ swiper-pagination {
   font-size: 34px;
   transition: all 0.3s ease;
 }
+
+@media (max-width: 1280px) {
+  .highlights-active {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  swiper-container {
+    height: 100%;
+  }
+
+  swiper-slide {
+    width: 450px;
+    flex-direction: column;
+  }
+
+  .highlights-active {
+    padding-left: 0px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 540px) {
+  swiper-slide {
+    width: 340px;
+  }
+}
