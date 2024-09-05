@@ -25,28 +25,28 @@ const Footer = () => {
                     <div>
                         <p className="text-lg font-semibold mb-3">ABOUT</p>
                         <div className="flex flex-col gap-2">
-                            <a href="#">Website Profile</a>
-                            <a href="#">The Developers</a>
-                            <a href="#">Museum Rules</a>
-                            <a href="#">Blog</a>
-                            <a href="#">What&apos;s Trending Now</a>
+                            <a href="#" className="hover:underline">Website Profile</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">The Developers</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Museum Rules</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Blog</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">What&apos;s Trending Now</a>
                         </div>
                     </div>
                     <div>
                         <p className="text-lg font-semibold mb-3">SUPPORT</p>
                         <div className="flex flex-col gap-2">
-                            <a href="#">Legal Notice</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Cookies</a>
-                            <a href="#">Copyrights</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Legal Notice</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Privacy Policy</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Cookies</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Copyrights</a>
                         </div>
                     </div>
                     <div>
                         <p className="text-lg font-semibold mb-3">CONTACT</p>
                         <div className="flex flex-col gap-2">
-                            <a href="#">FAQ</a>
-                            <a href="#">Contact Us</a>
-                            <a href="#">Give us your feedback!</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">FAQ</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Contact Us</a>
+                            <a href="#" className="hover:underline transition-all ease duration-300">Give us your feedback!</a>
                         </div>
                     </div>
                 </div>

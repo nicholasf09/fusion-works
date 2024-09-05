@@ -38,12 +38,12 @@ const Navbar = () => {
                     </li>
                     <li className="px-5 group">
                         <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
-                            Collection
+                            Highlights
                         </Link>
                     </li>
                     <li className="pl-5 pr-10 group">
                         <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
-                            About
+                            Collection
                         </Link>
                     </li>
                     <li className="px-3 py-1 border-2 bg-transparent rounded hover:bg-white hover:text-black duration-300 ease">

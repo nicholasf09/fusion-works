@@ -64,3 +64,10 @@ swiper-pagination {
 .shadow-custom {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
+
+.highlights-active {
+  padding-left: 20px;
+  color: #ca8a04;
+  font-size: 34px;
+  transition: all 0.3s ease;
+}
