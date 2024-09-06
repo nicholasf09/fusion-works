@@ -21,9 +21,9 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-3/5 h-full py-10 pl-20 flex justify-between max-[991px]:w-full max-[991px]:pl-0 max-[991px]:justify-start">
-                    <div className="max-[991px]:pr-20">
-                        <p className="text-lg font-semibold mb-3">ABOUT</p>
+                <div className="w-3/5 h-full py-10 pl-20 flex justify-between max-[991px]:w-full max-[991px]:pl-0 max-[991px]:justify-start max-sm:flex-col">
+                    <div className="max-[991px]:pr-20 max-sm:pb-10">
+                        <p className="text-lg font-semibold mb-3 max-sm:text-2xl">ABOUT</p>
                         <div className="flex flex-col gap-2">
                             <a href="#" className="hover:underline">Website Profile</a>
                             <a href="#" className="hover:underline transition-all ease duration-300">The Developers</a>
@@ -32,8 +32,8 @@ const Footer = () => {
                             <a href="#" className="hover:underline transition-all ease duration-300">What&apos;s Trending Now</a>
                         </div>
                     </div>
-                    <div className="max-[991px]:pr-20">
-                        <p className="text-lg font-semibold mb-3">SUPPORT</p>
+                    <div className="max-[991px]:pr-20 max-sm:pb-10">
+                        <p className="text-lg font-semibold mb-3 max-sm:text-2xl">SUPPORT</p>
                         <div className="flex flex-col gap-2">
                             <a href="#" className="hover:underline transition-all ease duration-300">Legal Notice</a>
                             <a href="#" className="hover:underline transition-all ease duration-300">Privacy Policy</a>
@@ -42,19 +42,19 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <p className="text-lg font-semibold mb-3">CONTACT</p>
+                        <p className="text-lg font-semibold mb-3 max-sm:text-2xl">CONTACT</p>
                         <div className="flex flex-col gap-2">
                             <a href="#" className="hover:underline transition-all ease duration-300">FAQ</a>
                             <a href="#" className="hover:underline transition-all ease duration-300">Contact Us</a>
                             <a href="#" className="hover:underline transition-all ease duration-300">Give us your feedback!</a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
             <div className="w-full mt-40 max-[991px]:mt-20">
                 <h1 className="text-xl font-bold">&copy; 2024 Fusion Works</h1>
             </div>
-        </div>
+        </div >
     );
 };
 

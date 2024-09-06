@@ -27,10 +27,10 @@ const Navbar = () => {
 
         const handleMenuToggle = () => {
             menuToggle.classList.toggle('bg-white/10');
-            if (menu.style.height === '300px') {
+            if (menu.style.height === '248px') {
                 menu.style.height = '0px';
             } else {
-                menu.style.height = '300px';
+                menu.style.height = '248px';
             }
         };
 
@@ -54,12 +54,7 @@ const Navbar = () => {
                     </li>
                     <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:hover:bg-slate-800/50 rounded-t-[20px]">
                         <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
-                            Exhibition
-                        </Link>
-                    </li>
-                    <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:hover:bg-slate-800/50 rounded-t-[20px]">
-                        <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
-                            Highlights
+                            About
                         </Link>
                     </li>
                     <li className="pl-5 pr-10 max-md:pr-0 max-md:pl-0 max-md:px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:hover:bg-slate-800/50 rounded-t-[20px]">

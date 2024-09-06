@@ -123,8 +123,8 @@ const Home = () => {
                   alt=""
                   className="w-[320px] h-fit object-cover mt-5 border-2 max-md:w-full"
                 />
-                <a
-                  href="#"
+                <Link
+                  to={"/"}
                   className="mt-5 text-[14px] flex bg-yellow-600 text-white font-sans font-semibold border-2 border-yellow-800 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease w-fit"
                 >
                   See the Art
@@ -141,7 +141,7 @@ const Home = () => {
                       d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="pl-5 w-2/4 h-full max-[991px]:w-full max-[991px]:pl-0 max-md:flex max-md:flex-col max-md:items-center">
@@ -156,9 +156,9 @@ const Home = () => {
                       }`}
                     onClick={() => handleItemClick(index)}
                   >
-                    <Link to={item.link}>
+                    <div className="overflow-y-hidden cursor-pointer">
                       <span className="pr-5">&mdash;</span> {item.title}
-                    </Link>
+                    </div>
                   </li>
                 ))}
               </ul>
