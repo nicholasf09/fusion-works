@@ -5,6 +5,7 @@ import styles from '../css/upload.module.css';
 const Upload = () => {
     const [artworkType, setArtworkType] = useState('Painting');
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('Artwork uploaded successfully!');
@@ -39,6 +40,10 @@ const Upload = () => {
                             value={artworkType} 
                             onChange={(e) => setArtworkType(e.target.value)} 
                             className="mt-2 block w-full p-2 h-12 bg-neutral-600 text-white rounded-md focus:outline-none focus:border-yellow-500 placeholder:italic placeholder:font-normal placeholder:text-neutral-400"
+                        <select
+                            value={artworkType}
+                            onChange={(e) => setArtworkType(e.target.value)}
+                            className="mt-2 block w-full p-2 h-12 bg-neutral-600 text-white rounded-md focus:outline-none focus:border-yellow-500 placeholder:italic placeholder:text-neutral-400"
                         >
                             <option value="Painting">Painting (img)</option>
                             <option value="Statue">Statue (img)</option>

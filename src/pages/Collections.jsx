@@ -3,8 +3,8 @@ import styles from '../css/upload.module.css';
 
 const Collections = () => {
   return (
-    <div className8={styles.uploadPage}>
-        <h1>Collections</h1>
+    <div className={styles.uploadPage}>
+      <h1>Collections</h1>
     </div>
   )
 }
