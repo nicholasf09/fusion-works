@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home'
 import UploadPage from './pages/Upload'
 import CollectionsPage from './pages/Collections'
+import MedievalPage from './pages/Medievals'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/collections',
     element: <CollectionsPage />,
+  },
+  {
+    path: '/exh/medieval',
+    element: <MedievalPage />,
   },
 ])
 

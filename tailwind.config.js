@@ -4,7 +4,12 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fluro: ['fluro-light', 'sans-serif'],
+        neue: ['neue', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

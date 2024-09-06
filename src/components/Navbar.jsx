@@ -8,7 +8,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 60) {
-                setNavbarBg("bg-yellow-700");
+                setNavbarBg("bg-neutral-800");
             } else {
                 setNavbarBg("bg-transparent");
             }
@@ -37,7 +37,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="px-5 group">
-                        <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
+                        <Link to="/collections" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
                             Collection
                         </Link>
                     </li>

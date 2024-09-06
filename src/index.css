@@ -14,7 +14,14 @@ body {
   height: 100%;
   background-color: #242424;
 }
-
+@font-face {
+    font-family: 'fluro-light';
+    src: url('/fonts/fluro-light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'neue';
+  src: url('/fonts/neue-regular.ttf') format('truetype');
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

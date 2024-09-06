@@ -13,7 +13,7 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px]">FusionWorks</h1>
           <p className="text-center w-1/4">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <Link to="/" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</Link>
+          <Link to="/uploads" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</Link>
         </div>
       </div>
 
@@ -23,6 +23,7 @@ const Home = () => {
           <div className="w-4/6 flex flex-col justify-center">
             <p className="text-zinc-500 pl-10 pb-2 text-[16px] overflow-hidden">Diverse Perspectives: One Unified Canvas</p>
             <h1 className="text-yellow-600 pl-10 text-5xl overflow-hidden font-semibold">Exhibition</h1>
+          <Link to="/exh/medieval" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white text-white hover:text-black duration-300 ease">Medieval (link sementara)</Link>
           </div>
           <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600" />
         </div>
