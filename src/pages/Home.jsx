@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ExhibitionCard from "../components/ExhibitionCard";
@@ -40,6 +40,63 @@ const Home = () => {
     };
   }, []);
 
+  const [startCounting, setStartCounting] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setStartCounting(true);
+        observer.disconnect(); // Stop observing after counting starts
+      }
+    }, { threshold: 0.5 });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (startCounting) {
+      const countUp = (element, start, target, duration) => {
+        const increment = (target - start) / (duration / 16); // Increment per frame (~60fps)
+        let current = start;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.ceil(current) + "+";
+        }, 16);
+      };
+
+      const stats = sectionRef.current.querySelectorAll(".count");
+      stats.forEach((stat) => {
+        const target = parseInt(stat.getAttribute("data-target"));
+        let start;
+        switch (target) {
+          case 500:
+            start = 480; // Start 500 from 480
+            break;
+          case 60:
+            start = 40;  // Start 60 from 40
+            break;
+          case 20:
+            start = 0;   // Start 20 from 0
+            break;
+          default:
+            start = 0;
+        }
+        countUp(stat, start, target, 1000); // 8000ms = 8 seconds for all
+      });
+    }
+  }, [startCounting]);
+
   return (
     <>
       <Navbar></Navbar>
@@ -49,11 +106,11 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <Link to="/" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</Link>
+          <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
         </div>
       </div>
 
-      <div className="w-full h-full py-[80px] max-md:py-[40px]">
+      <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
         <div className="w-full flex">
           <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:hidden" />
           <div className="w-4/6 flex flex-col justify-center max-[991px]:w-10/12">
@@ -90,11 +147,36 @@ const Home = () => {
 
             }
           }>
-          <ExhibitionCard></ExhibitionCard>
-          <ExhibitionCard></ExhibitionCard>
-          <ExhibitionCard></ExhibitionCard>
-          <ExhibitionCard></ExhibitionCard>
-          <ExhibitionCard></ExhibitionCard>
+          <ExhibitionCard
+            ExImage="/assets/hero-home.jpg"
+            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExRedirect="/exh/medieval"
+          />
+          <ExhibitionCard
+            ExImage="/assets/hero-home.jpg"
+            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExRedirect="/exh/medieval"
+          />
+          <ExhibitionCard
+            ExImage="/assets/hero-home.jpg"
+            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExRedirect="/exh/medieval"
+          />
+          <ExhibitionCard
+            ExImage="/assets/hero-home.jpg"
+            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExRedirect="/exh/medieval"
+          />
+          <ExhibitionCard
+            ExImage="/assets/hero-home.jpg"
+            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExRedirect="/exh/medieval"
+          />
         </swiper-container>
 
         <div className="flex justify-center text-white mb-10 mt-[-50px] max-md:mt-[-60px]">
@@ -167,11 +249,35 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full h-full bg-gradient-to-b from-[#242424] to-neutral-900">
-        <div className="w-full h-full py-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
+      <div ref={sectionRef} className="w-full h-full my-10 text-white flex py-10 justify-evenly px-20 max-md:px-5 max-sm:flex-col max-sm:my-5 max-sm:py-0">
+        <div className="flex items-center max-sm:py-5">
+          <img src="assets/artwork.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
+          <div className="ml-5">
+            <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="500">0</h1>
+            <p className="text-zinc-400 font-medium">Artworks</p>
+          </div>
+        </div>
+        <div className="flex items-center max-sm:py-5">
+          <img src="assets/artist.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
+          <div className="ml-5">
+            <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="60">0</h1>
+            <p className="text-zinc-400 font-medium">Artists</p>
+          </div>
+        </div>
+        <div className="flex items-center max-sm:py-5">
+          <img src="assets/collicon.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
+          <div className="ml-5">
+            <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="20">0</h1>
+            <p className="text-zinc-400 font-medium">Collections</p>
+          </div>
+        </div>
+      </div >
+
+      <div className="w-full h-full">
+        <div className="w-full h-full pt-10 pb-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
-            <Link to={"/"} className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden">
+            <Link to="/collections" className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden">
               <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">View All Collection</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right group-hover:text-yellow-500" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
@@ -213,7 +319,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Link to={"/"} className="flex items-center transition-all duration-300 min-[540px]:hidden border-2 w-fit px-3 py-2 hover:bg-white hover:text-black">
+          <Link to="/collections" className="flex items-center transition-all duration-300 min-[540px]:hidden border-2 w-fit px-3 py-2 hover:bg-white hover:text-black">
             <p className="pr-2">View All Collection</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
