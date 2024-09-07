@@ -68,7 +68,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="px-3 py-1 border-2 bg-transparent rounded hover:bg-white hover:text-black duration-300 ease">
-                        <Link to="/">Contribute</Link>
+                        <Link to="/uploads">Contribute</Link>
                     </li>
                 </ul>
             </div>

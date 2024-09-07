@@ -167,7 +167,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full h-full bg-gradient-to-b from-[#242424] to-yellow-700">
+      <div className="w-full h-full bg-gradient-to-b from-[#242424] to-neutral-900">
         <div className="w-full h-full py-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>

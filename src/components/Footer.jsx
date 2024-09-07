@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const Footer = () => {
 
     return (
-        <div className="w-full h-full bg-yellow-700 text-white py-10 px-[100px] flex flex-col justify-between max-[1280px]:px-10">
+        <div className="w-full h-full bg-neutral-900 text-white py-10 px-[100px] flex flex-col justify-between max-[1280px]:px-10">
             <div className="w-full h-full flex items-center max-[991px]:flex-col">
                 <div className="w-2/5 h-full py-10 pr-20 border-r-2 max-[991px]:border-0 max-[991px]:w-full max-[991px]:pr-0">
                     <p className="text-md font-bold mb-3">FusionWorks</p>
