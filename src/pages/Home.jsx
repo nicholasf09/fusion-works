@@ -49,11 +49,11 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <Link to="/" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</Link>
+          <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
         </div>
       </div>
 
-      <div className="w-full h-full py-[80px] max-md:py-[40px]">
+      <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
         <div className="w-full flex">
           <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:hidden" />
           <div className="w-4/6 flex flex-col justify-center max-[991px]:w-10/12">
@@ -167,11 +167,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full h-full bg-gradient-to-b from-[#242424] to-yellow-700">
+      <div className="w-full h-full">
         <div className="w-full h-full py-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
-            <Link to={"/"} className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden">
+            <Link to="/collections" className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden">
               <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">View All Collection</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right group-hover:text-yellow-500" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
@@ -213,7 +213,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Link to={"/"} className="flex items-center transition-all duration-300 min-[540px]:hidden border-2 w-fit px-3 py-2 hover:bg-white hover:text-black">
+          <Link to="/collections" className="flex items-center transition-all duration-300 min-[540px]:hidden border-2 w-fit px-3 py-2 hover:bg-white hover:text-black">
             <p className="pr-2">View All Collection</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />

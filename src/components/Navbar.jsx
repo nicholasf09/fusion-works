@@ -8,7 +8,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 60) {
-                setNavbarBg("bg-neutral-800");
+                setNavbarBg("bg-zinc-800");
             } else {
                 setNavbarBg("bg-transparent");
             }
@@ -47,28 +47,23 @@ const Navbar = () => {
             <h1 className="text-xl font-bold max-xl:text-lg">FusionWorks</h1>
             <div id="menu" className="flex items-center max-md:flex-col max-md:fixed max-md:top-[60px] max-md:left-0 max-md:z-[999] max-md:w-full max-md:h-[0px] max-md:overflow-y-hidden transition-height duration-300 ease-in-out max-md:px-5">
                 <ul className="flex items-center h-[60px] max-md:flex-col max-md:bg-black/80 max-md:h-full max-md:w-full max-md:rounded-[20px] max-md:mt-2 max-md:overflow-y-hidden">
-                    <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:hover:bg-slate-800/50 rounded-t-[20px]">
+                    <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
                         <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
                             Home
                         </Link>
                     </li>
-                    <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:hover:bg-slate-800/50 rounded-t-[20px]">
+                    <li className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
                         <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
                             About
                         </Link>
                     </li>
-                    <li className="px-5 group">
-                        <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
+                    <li className="pl-5 pr-10 max-md:pr-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
+                        <Link to="/collections" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
                             Collection
                         </Link>
                     </li>
-                    <li className="pl-5 pr-10 group">
-                        <Link to="/" className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full">
-                            About
-                        </Link>
-                    </li>
-                    <li className="px-3 py-1 border-2 bg-transparent rounded hover:bg-white hover:text-black duration-300 ease">
-                        <Link to="/">Contribute</Link>
+                    <li className="px-3 py-1 border-2 bg-transparent rounded hover:bg-white hover:text-black duration-300 ease max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-white max-md:active:text-black max-md:rounded-b-[20px] max-md:overflow-y-hidden">
+                        <Link to="/uploads">Contribute</Link>
                     </li>
                 </ul>
             </div>
