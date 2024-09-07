@@ -5,6 +5,11 @@ import Footer from '../components/Footer';
 import DropdownComponent from '../components/DropdownComponent';
 
 const Collections = () => {
+  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
   useEffect(() => {
