@@ -79,11 +79,11 @@ const Medieval = () => {
         />
       </div>
 
-      <div className='flex max-w-[80vw] '> 
+      <div className='flex max-w-[80vw] flex-col sm:flex-row'> 
         <div className="text-justify mb-8 ">
             <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition presents</p>
-          <h1 className='text-5xl py-2 font-fluro tracking-normal font-bold'>An Artistic Journey Through Medieval Times</h1>
-          <p className="text-xl font-neue mt-3 leading-8">
+          <h1 className='text-3xl sm:text-5xl py-2 font-fluro tracking-normal font-bold'>An Artistic Journey Through Medieval Times</h1>
+          <p className="text-base sm:text-xl font-neue mt-3 leading-8">
           Castles, knights, battles, and imaginary creatures of the Middle Ages perpetually 
           inspire art, literature, photography, film, and reenactment. These later fantasy works 
           blend historical source material with legendary or magical elements to create memorable 
@@ -111,12 +111,12 @@ const Medieval = () => {
       </div>
 
       <div className='border-neutral-500 mt-16 border-solid border-t-2 pt-8'>
-        <div className=" relative w-[80vw] rounded-xl mt-8 bg-cover shadow-lg bg-center sm:h-[80vh] bg-[url('/assets/yt-thumbnail.jpg')]">
+        <div className=" relative w-[80vw] rounded-xl mt-8 bg-cover shadow-lg bg-center h-[50vh] sm:h-[80vh] bg-[url('/assets/yt-thumbnail.jpg')]">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-fluro tracking-wide font-bold mb-4">Discover Medievals</h1>
-            <p className="text-lg font-light md:text-xl mb-8">
+            <h1 className="text-2xl md:text-6xl font-fluro tracking-wide font-bold mb-4">Discover Medievals</h1>
+            <p className="text-[10px] font-neue font-light sm:text-xl mb-8">
               Explore the diverse and enchanting landscapes, cultures,<br />
               and experiences that Middle Ages has to offer.
             </p>
@@ -253,7 +253,7 @@ const Medieval = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent cursor-pointeropacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
               <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                <h2 className="text-xl font-bold">The City of Thousang Trades, Venice </h2>
+                <h2 className="text-xl font-bold">The City of Thousand Trades, Venice </h2>
                 <p className="text-sm">By Younha</p>
               </div>
             </div>
@@ -294,7 +294,7 @@ const Medieval = () => {
 
       <div className="max-w-[80vw] py-8 mb-8 border-neutral-500 border-solid border-t-2 mt-16">
         <h2 className="text-5xl py-2 font-fluro  mb-8">Featured Exhibitions</h2>
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row sm:space-x-4">
           {collections.map((item, index) => (
             <div
               key={index}
