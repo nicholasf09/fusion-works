@@ -2,7 +2,9 @@
 import { useEffect, useState } from 'react';
 import CollectionCard from './CollectionCard'; // Assuming CollectionCard is in the same folder
 
-const DropdownComponent = ({ BigTitle, BigDesc, bgImage, Title, Desc, uniqueId }) => {
+const DropdownComponent = (props) => {
+    const { BigTitle, BigDesc, bgImage, Title, Desc, uniqueId } = props;
+
     const [isDropdownActive, setIsDropdownActive] = useState(uniqueId === "1");
 
     useEffect(() => {
