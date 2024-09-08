@@ -238,7 +238,7 @@ const Home = () => {
                   className="w-[320px] h-fit object-cover mt-5 border-2 max-md:w-full"
                 />
                 <Link
-                  to={"/"}
+                  to={"/artwork"}
                   className="mt-5 text-[14px] flex bg-yellow-600 text-white font-sans font-semibold border-2 border-yellow-800 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease w-fit"
                 >
                   See the Art
