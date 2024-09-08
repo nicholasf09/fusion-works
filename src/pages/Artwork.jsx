@@ -1,10 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import './transition.css';
 
 function Artwork() {
+
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const navigate = useNavigate();
+
+  // Trigger the overlay to be visible on initial load
+  useEffect(() => {
+    setIsOverlayVisible(true);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,6 +22,19 @@ function Artwork() {
   return (
     <>
       <Navbar></Navbar>
+
+      <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+      </div>
 
       <div className='w-full h-full bg-[url("/assets/background-highlights.png")] bg-cover bg-center text-white'>
         <div className='w-full h-full bg-black/70 pt-20 flex justify-center items-center flex-col'>

@@ -123,6 +123,24 @@ const Home = () => {
       navigate('/uploads'); // Navigate to the given URL
     }, 1000);
   };  
+  const handleButtonClickMedieval  = (e) => {
+    e.preventDefault();
+    setIsOverlayVisible(!isOverlayVisible);
+
+    // Delay navigation after the state change for smooth animation
+    setTimeout(() => {
+      navigate('/exh/medieval'); // Navigate to the given URL
+    }, 1000);
+  }; 
+  const handleButtonClickArtwork  = (e) => {
+    e.preventDefault();
+    setIsOverlayVisible(!isOverlayVisible);
+
+    // Delay navigation after the state change for smooth animation
+    setTimeout(() => {
+      navigate('/artwork'); // Navigate to the given URL
+    }, 1000);
+  }; 
 
   return (
     <>
@@ -138,16 +156,16 @@ const Home = () => {
       </div>
 
       <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
       </div>
 
       <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
@@ -196,7 +214,10 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Echoes of the Middle Ages: A Journey Through Medieval Times</h1>
               <p className="text-[13px] font-sans leading-6">A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms.</p>
               <div className="py-6">
-                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                <button 
+                  onClick={handleButtonClickMedieval} 
+                  className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                >See More</button>
               </div>
             </div>
           </swiper-slide>
@@ -209,7 +230,10 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Heritage Threads of Perfrections: The Elegance of Batik</h1>
               <p className="text-[13px] font-sans leading-6">Step into a world where tradition meets artistry, showcasing the intricate significance of batik, a timeless craft that weaves stories through its exquisite patterns.</p>
               <div className="py-6">
-                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                <button 
+                  onClick={handleButtonClickMedieval} 
+                  className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                >See More</button>
               </div>
             </div>
           </swiper-slide>
@@ -222,7 +246,10 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Serenity Graces: Women Perception in Art and History</h1>
               <p className="text-[13px] font-sans leading-6">Discover the profound beauty and influence of women through the ages, where diverse and powerful roles women had resilience that define the feminine spirit</p>
               <div className="py-6">
-                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                <button 
+                  onClick={handleButtonClickMedieval} 
+                  className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                >See More</button>
               </div>
             </div>
           </swiper-slide>
@@ -235,7 +262,10 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">A Quiet Resignation to the Darkness of Night, Volume II</h1>
               <p className="text-[13px] font-sans leading-6">A prequel to the previous work. Immerse yourself in the enigmatic allure of night, delves into themes of solitude, mystery, and the quiet beauty found in the shadows.</p>
               <div className="py-6">
-                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                <button 
+                  onClick={handleButtonClickMedieval} 
+                  className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                >See More</button>
               </div>
             </div>
           </swiper-slide>
@@ -248,7 +278,10 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures</h1>
               <p className="text-[13px] font-sans leading-6">Explore the hidden anxieties and silent fears of today’s youth, captures the unspoken concerns of young minds through artworks, offering a poignant glimpse into their hopes.</p>
               <div className="py-6">
-                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                <button 
+                  onClick={handleButtonClickMedieval} 
+                  className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                >See More</button>
               </div>
             </div>
           </swiper-slide>
@@ -280,8 +313,8 @@ const Home = () => {
                   alt=""
                   className="w-[320px] h-fit object-cover mt-5 border-2 max-md:w-full"
                 />
-                <Link
-                  to={"/artwork"}
+                <button
+                  onClick={handleButtonClickArtwork}
                   className="mt-5 text-[14px] flex bg-yellow-600 text-white font-sans font-semibold border-2 border-yellow-800 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease w-fit"
                 >
                   See the Art
@@ -298,7 +331,8 @@ const Home = () => {
                       d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                     />
                   </svg>
-                </Link>
+                </button>
+
               </div>
             </div>
             <div className="pl-5 w-2/4 h-full max-[991px]:w-full max-[991px]:pl-0 max-md:flex max-md:flex-col max-md:items-center">
