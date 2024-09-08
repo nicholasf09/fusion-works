@@ -148,33 +148,33 @@ const Home = () => {
             }
           }>
           <ExhibitionCard
-            ExImage="/assets/hero-home.jpg"
-            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
+            ExImage="/assets/medieval-2.jpg"
+            ExTitle="Echoes of the Middle Ages: A Journey Through Medieval Times"
             ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
             ExRedirect="/exh/medieval"
           />
           <ExhibitionCard
-            ExImage="/assets/hero-home.jpg"
-            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
-            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExImage="/assets/batik.jpg"
+            ExTitle="Heritage Threads of Perfrections: The Elegance of Batik"
+            ExDesc="Step into a world where tradition meets artistry, showcasing the intricate significance of batik, a timeless craft that weaves stories through its exquisite patterns."
             ExRedirect="/exh/medieval"
           />
           <ExhibitionCard
-            ExImage="/assets/hero-home.jpg"
-            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
-            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExImage="/assets/women-1.jpeg"
+            ExTitle="Serenity Graces: Women Perception in Art and History"
+            ExDesc="Discover the profound beauty and influence of women through the ages, where diverse and powerful roles women had resilience that define the feminine spirit"
             ExRedirect="/exh/medieval"
           />
           <ExhibitionCard
-            ExImage="/assets/hero-home.jpg"
-            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
-            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExImage="/assets/thestarrynight.jpg"
+            ExTitle="A Quiet Resignation to the Darkness of Night, Volume II"
+            ExDesc="A prequel to the previous work. Immerse yourself in the enigmatic allure of night, delves into themes of solitude, mystery, and the quiet beauty found in the shadows."
             ExRedirect="/exh/medieval"
           />
           <ExhibitionCard
-            ExImage="/assets/hero-home.jpg"
-            ExTitle="Echoes of the Middle Ages: An Artistic Journey Through Medieval Times"
-            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
+            ExImage="/assets/poems.jpg"
+            ExTitle="Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures"
+            ExDesc="Explore the hidden anxieties and silent fears of today’s youth, captures the unspoken concerns of young minds through artworks, offering a poignant glimpse into their hopes."
             ExRedirect="/exh/medieval"
           />
         </swiper-container>

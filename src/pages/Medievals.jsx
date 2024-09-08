@@ -34,24 +34,24 @@ const Medieval = () => {
 
   const collections = [
     {
-      title: 'Heritage-Inspired Patterns of Exquisite Batik',
+      title: 'Heritage Threads of Perfections: The Elegance of Batik',
       id: 'CDD.BP.03',
-      imageUrl: '/assets/medieval-2.jpg',
+      imageUrl: '/assets/batik.jpg',
     },
     {
-      title: "The Art of War: Conflict",
+      title: "Serenity Graces: Women Perception in Art and History",
       id: '1892.T.027',
-      imageUrl: '/assets/medieval-2.jpg',
+      imageUrl: '/assets/women-1.jpeg',
     },
     {
-      title: 'A Quiet Resignation to the Darkness of Night',
+      title: 'A Quiet Resignation to the Darkness of Night, Volume II',
       id: '1993.050a.096',
-      imageUrl: '/assets/medieval-2.jpg',
+      imageUrl: '/assets/thestarrynight.jpg',
     },
     {
-      title: 'Window in Palazzo del Popolo, Orvieto',
+      title: 'Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures',
       id: '1993.050a.096',
-      imageUrl: '/assets/medieval-2.jpg',
+      imageUrl: '/assets/poems.jpg',
     },
   ];
 
@@ -305,7 +305,7 @@ const Medieval = () => {
                 alt={item.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
+              <div className="p-4 pl-1">
                 <h3 className="text-xl font-fluro">{item.title}</h3>
               </div>
             </div>
