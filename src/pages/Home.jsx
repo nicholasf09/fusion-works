@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ExhibitionCard from "../components/ExhibitionCard";
 import Footer from "../components/Footer";
+import './transition.css';
 
 const Home = () => {
   const artworks = [
@@ -97,6 +98,24 @@ const Home = () => {
     }
   }, [startCounting]);
 
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const navigate = useNavigate();
+
+  // Trigger the overlay to be visible on initial load
+  useEffect(() => {
+    setIsOverlayVisible(true);
+  }, []);
+
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    setIsOverlayVisible(!isOverlayVisible);
+
+    // Delay navigation after the state change for smooth animation
+    setTimeout(() => {
+      navigate('/collections'); // Navigate to the given URL
+    }, 1000);
+  };
+
   return (
     <>
       <Navbar></Navbar>
@@ -106,8 +125,21 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
+          <a href="/exh/medievals" onClick={handleButtonClick} className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
         </div>
+      </div>
+
+      <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
       </div>
 
       <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
@@ -277,12 +309,17 @@ const Home = () => {
         <div className="w-full h-full pt-10 pb-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
-            <Link to="/collections" className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden">
-              <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">View All Collection</p>
+            <button 
+              onClick={handleButtonClick} 
+              className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden"
+            >
+              <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">
+                View All Collection
+              </p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right group-hover:text-yellow-500" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
               </svg>
-            </Link>
+            </button>
           </div >
           <div className="py-6">
             <p className="text-zinc-400 w-3/4 pb-6 max-[991px]:w-full">Our collection currently contains more than 1,000 artworks from different perspectives, offering a diverse and rich exploration of creativity across the globe.</p>

@@ -1,10 +1,23 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../pages/transition.css";
 
 const ExhibitionCard = (props) => {
     const { ExImage, ExTitle, ExDesc, ExRedirect } = props;
+    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const handleButtonClick = (e) => {
+        e.preventDefault();
+        setIsOverlayVisible(!isOverlayVisible);
+
+        // Add a delay of 500ms before navigation
+        setTimeout(() => {
+            navigate(ExRedirect);
+        }, 500);
+    };
 
     return (
         <swiper-slide>
@@ -16,7 +29,12 @@ const ExhibitionCard = (props) => {
                 <h1 className="text-[22px] font-medium py-5">{ExTitle}</h1>
                 <p className="text-[13px] font-sans leading-6">{ExDesc}</p>
                 <div className="py-6">
-                    <Link to={ExRedirect} className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+                    <button
+                        onClick={handleButtonClick}
+                        className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
+                    >
+                        See More
+                    </button>
                 </div>
             </div>
         </swiper-slide>

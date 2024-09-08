@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import DropdownComponent from '../components/DropdownComponent';
+import "./transition.css";
 
 const Collections = () => {
   
@@ -40,6 +41,12 @@ const Collections = () => {
     }
   }, [isDropdownActive]);
 
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  useEffect(() => {
+    setIsOverlayVisible(true);
+  }, []);
+
+
   return (
     <>
       <Navbar></Navbar>
@@ -48,6 +55,19 @@ const Collections = () => {
           <h1 className="text-[100px] font-bold max-md:text-[60px] max-[540px]:text-[40px]">WHAT&apos;S ON</h1>
           <p className="text-[18px] mt-[-15px] max-md:mt-0">What is there to see at the FusionWorks Gallery.</p>
         </div>
+      </div>
+
+      <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
       </div>
 
       <div className='w-full mt-10'>
