@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CollectionCard = (props) => {
     const { bgImage, Title, Desc } = props;
     return (
-        <div
+        <Link to="/artwork"
             className="w-full h-full bg-cover bg-center rounded-xl cursor-pointer transition-all duration-300 ease-in-out"
             style={{
                 backgroundImage: `url(${bgImage})`,
@@ -18,7 +19,7 @@ const CollectionCard = (props) => {
                     &quot;{Title}&quot;
                 </h1>
             </div>
-        </div>
+        </Link>
     );
 };
 
