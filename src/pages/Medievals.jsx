@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from 'framer-motion';
+import './transition.css';
+
 
 const Medieval = () => {
 
@@ -66,6 +68,18 @@ const Medieval = () => {
     setIsOpen(false);
   };
 
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
+
+  useEffect(() => {
+    setIsOverlayVisible(true);
+  }, []);
+
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    setIsOverlayVisible(!isOverlayVisible);
+  };  
+
   return (
     <div className="min-h-screen text-white flex flex-col items-center">
 
@@ -77,6 +91,19 @@ const Medieval = () => {
           alt="Medieval Castle"
           className="w-full h-full object-cover opacity-80"
         />
+      </div>
+
+      <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
       </div>
 
       <div className='flex max-w-[80vw] flex-col sm:flex-row'> 
