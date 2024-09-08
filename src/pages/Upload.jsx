@@ -1,19 +1,35 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../css/upload.module.css';
+import './transition.css';
 
 const Upload = () => {
     const [artworkType, setArtworkType] = useState('Painting');
 
+    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('Artwork uploaded successfully!');
-        // Handle client-side upload logic here
     };
+
+    useEffect(() => {
+    setIsOverlayVisible(true);
+    }, []);
 
     return (
         <div className={styles.uploadPage}>
+            <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
             <div className="w-xl h-2/12 p-10 bg-neutral-800 rounded-xl shadow-lg">
                 <h2 className="text-2xl font-bold text-white text-center mb-6">UPLOAD YOUR WORKS</h2>
                 <p className="text-lg text-gray-300 text-center mb-6">Art is not what you see, but what you make others see</p>

@@ -106,7 +106,7 @@ const Home = () => {
     setIsOverlayVisible(true);
   }, []);
 
-  const handleButtonClick = (e) => {
+  const handleButtonClickCollection  = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
 
@@ -114,7 +114,16 @@ const Home = () => {
     setTimeout(() => {
       navigate('/collections'); // Navigate to the given URL
     }, 1000);
-  };
+  }; 
+  const handleButtonClickUpload  = (e) => {
+    e.preventDefault();
+    setIsOverlayVisible(!isOverlayVisible);
+
+    // Delay navigation after the state change for smooth animation
+    setTimeout(() => {
+      navigate('/uploads'); // Navigate to the given URL
+    }, 1000);
+  };  
 
   return (
     <>
@@ -125,7 +134,7 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <a href="/exh/medievals" onClick={handleButtonClick} className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
+          <a href="/exh/medievals" onClick={handleButtonClickUpload} className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Contribute</a>
         </div>
       </div>
 
@@ -310,7 +319,7 @@ const Home = () => {
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
             <button 
-              onClick={handleButtonClick} 
+              onClick={handleButtonClickCollection} 
               className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden"
             >
               <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">
