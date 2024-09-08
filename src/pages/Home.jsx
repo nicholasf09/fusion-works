@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import ExhibitionCard from "../components/ExhibitionCard";
 import Footer from "../components/Footer";
 import './transition.css';
 
@@ -188,36 +187,71 @@ const Home = () => {
 
             }
           }>
-          <ExhibitionCard
-            ExImage="/assets/medieval-2.jpg"
-            ExTitle="Echoes of the Middle Ages: A Journey Through Medieval Times"
-            ExDesc="A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms."
-            ExRedirect="/exh/medieval"
-          />
-          <ExhibitionCard
-            ExImage="/assets/batik.jpg"
-            ExTitle="Heritage Threads of Perfrections: The Elegance of Batik"
-            ExDesc="Step into a world where tradition meets artistry, showcasing the intricate significance of batik, a timeless craft that weaves stories through its exquisite patterns."
-            ExRedirect="/exh/medieval"
-          />
-          <ExhibitionCard
-            ExImage="/assets/women-1.jpeg"
-            ExTitle="Serenity Graces: Women Perception in Art and History"
-            ExDesc="Discover the profound beauty and influence of women through the ages, where diverse and powerful roles women had resilience that define the feminine spirit"
-            ExRedirect="/exh/medieval"
-          />
-          <ExhibitionCard
-            ExImage="/assets/thestarrynight.jpg"
-            ExTitle="A Quiet Resignation to the Darkness of Night, Volume II"
-            ExDesc="A prequel to the previous work. Immerse yourself in the enigmatic allure of night, delves into themes of solitude, mystery, and the quiet beauty found in the shadows."
-            ExRedirect="/exh/medieval"
-          />
-          <ExhibitionCard
-            ExImage="/assets/poems.jpg"
-            ExTitle="Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures"
-            ExDesc="Explore the hidden anxieties and silent fears of today’s youth, captures the unspoken concerns of young minds through artworks, offering a poignant glimpse into their hopes."
-            ExRedirect="/exh/medieval"
-          />
+          <swiper-slide>
+            <div className="w-2/4 h-full flex items-center max-[991px]:w-full">
+              <img src="/assets/medieval-2.jpg" alt="" className="w-full h-5/6 object-cover max-[991px]:h-[200px]" />
+            </div>
+            <div className="w-2/4 max-[991px]:w-full h-full text-start flex flex-col justify-center px-5 bg-[#303030] shadow-inner max-[991px]:pt-5">
+              <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition</p>
+              <h1 className="text-[22px] font-medium py-5">Echoes of the Middle Ages: A Journey Through Medieval Times</h1>
+              <p className="text-[13px] font-sans leading-6">A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms.</p>
+              <div className="py-6">
+                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div className="w-2/4 h-full flex items-center max-[991px]:w-full">
+              <img src="/assets/batik.jpg" alt="" className="w-full h-5/6 object-cover max-[991px]:h-[200px]" />
+            </div>
+            <div className="w-2/4 max-[991px]:w-full h-full text-start flex flex-col justify-center px-5 bg-[#303030] shadow-inner max-[991px]:pt-5">
+              <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition</p>
+              <h1 className="text-[22px] font-medium py-5">Heritage Threads of Perfrections: The Elegance of Batik</h1>
+              <p className="text-[13px] font-sans leading-6">Step into a world where tradition meets artistry, showcasing the intricate significance of batik, a timeless craft that weaves stories through its exquisite patterns.</p>
+              <div className="py-6">
+                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div className="w-2/4 h-full flex items-center max-[991px]:w-full">
+              <img src="/assets/women-1.jpeg" alt="" className="w-full h-5/6 object-cover max-[991px]:h-[200px]" />
+            </div>
+            <div className="w-2/4 max-[991px]:w-full h-full text-start flex flex-col justify-center px-5 bg-[#303030] shadow-inner max-[991px]:pt-5">
+              <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition</p>
+              <h1 className="text-[22px] font-medium py-5">Serenity Graces: Women Perception in Art and History</h1>
+              <p className="text-[13px] font-sans leading-6">Discover the profound beauty and influence of women through the ages, where diverse and powerful roles women had resilience that define the feminine spirit</p>
+              <div className="py-6">
+                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div className="w-2/4 h-full flex items-center max-[991px]:w-full">
+              <img src="/assets/thestarrynight.jpg" alt="" className="w-full h-5/6 object-cover max-[991px]:h-[200px]" />
+            </div>
+            <div className="w-2/4 max-[991px]:w-full h-full text-start flex flex-col justify-center px-5 bg-[#303030] shadow-inner max-[991px]:pt-5">
+              <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition</p>
+              <h1 className="text-[22px] font-medium py-5">A Quiet Resignation to the Darkness of Night, Volume II</h1>
+              <p className="text-[13px] font-sans leading-6">A prequel to the previous work. Immerse yourself in the enigmatic allure of night, delves into themes of solitude, mystery, and the quiet beauty found in the shadows.</p>
+              <div className="py-6">
+                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div className="w-2/4 h-full flex items-center max-[991px]:w-full">
+              <img src="/assets/poems.jpg" alt="" className="w-full h-5/6 object-cover max-[991px]:h-[200px]" />
+            </div>
+            <div className="w-2/4 max-[991px]:w-full h-full text-start flex flex-col justify-center px-5 bg-[#303030] shadow-inner max-[991px]:pt-5">
+              <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition</p>
+              <h1 className="text-[22px] font-medium py-5">Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures</h1>
+              <p className="text-[13px] font-sans leading-6">Explore the hidden anxieties and silent fears of today’s youth, captures the unspoken concerns of young minds through artworks, offering a poignant glimpse into their hopes.</p>
+              <div className="py-6">
+                <Link to="/exh/medieval" className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease">See More</Link>
+              </div>
+            </div>
+          </swiper-slide>
         </swiper-container>
 
         <div className="flex justify-center text-white mb-10 mt-[-50px] max-md:mt-[-60px]">
@@ -229,7 +263,7 @@ const Home = () => {
             <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
           </svg></div>
         </div>
-      </div>
+      </div >
 
       <div className="w-full h-full text-white px-[180px] py-10 max-xl:px-20 max-md:px-6">
         <p className="text-zinc-500 pb-2">Today&apos;s Highlights</p>
