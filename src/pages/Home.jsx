@@ -401,32 +401,32 @@ const Home = () => {
           <div className="py-6">
             <p className="text-zinc-400 w-3/4 pb-6 max-[991px]:w-full">Our collection currently contains more than 1,000 artworks from different perspectives, offering a diverse and rich exploration of creativity across the globe.</p>
             <div className="grid grid-cols-12 grid-rows-6 gap-x-4 gap-y-4 h-[600px] max-xl:h-[450px] max-[991px]:grid-cols-2 max-[991px]:grid-rows-3 max-[991px]:h-[600px] max-[540px]:grid-cols-1 max-[540px]:grid-rows-6 max-[540px]:h-[1200px]">
-              <div className="col-span-3 row-span-6 bg-black w-full h-full bg-[url('assets/photograph.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
+              <div className="col-span-3 row-span-6 bg-black w-full h-full bg-[url('/assets/photograph.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Photographs</h1>
                 </div>
               </div>
-              <div className="col-span-5 row-span-4 bg-black w-full h-full bg-[url('assets/painting.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
+              <div className="col-span-5 row-span-4 bg-black w-full h-full bg-[url('/assets/painting.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Paintings</h1>
                 </div>
               </div>
-              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('assets/vectors.png')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
+              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/vectors.png')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Vectors</h1>
                 </div>
               </div>
-              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('assets/3dmodel.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
+              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/3dmodel.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">3D Models</h1>
                 </div>
               </div>
-              <div className="col-span-2 row-span-2 bg-black w-full h-full bg-[url('assets/music.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-bottom">
+              <div className="col-span-2 row-span-2 bg-black w-full h-full bg-[url('/assets/music.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-bottom">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Musics</h1>
                 </div>
               </div>
-              <div className="col-span-3 row-span-2 bg-black w-full h-full bg-[url('assets/videos.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
+              <div className="col-span-3 row-span-2 bg-black w-full h-full bg-[url('/assets/videos.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
                 <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Videos</h1>
                 </div>
