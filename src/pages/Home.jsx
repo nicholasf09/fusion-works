@@ -105,7 +105,7 @@ const Home = () => {
     setIsOverlayVisible(true);
   }, []);
 
-  const handleButtonClickCollection  = (e) => {
+  const handleButtonClickCollection = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
 
@@ -113,8 +113,8 @@ const Home = () => {
     setTimeout(() => {
       navigate('/collections'); // Navigate to the given URL
     }, 1000);
-  }; 
-  const handleButtonClickUpload  = (e) => {
+  };
+  const handleButtonClickUpload = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
 
@@ -122,8 +122,8 @@ const Home = () => {
     setTimeout(() => {
       navigate('/uploads'); // Navigate to the given URL
     }, 1000);
-  };  
-  const handleButtonClickMedieval  = (e) => {
+  };
+  const handleButtonClickMedieval = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
 
@@ -131,8 +131,8 @@ const Home = () => {
     setTimeout(() => {
       navigate('/exh/medieval'); // Navigate to the given URL
     }, 1000);
-  }; 
-  const handleButtonClickArtwork  = (e) => {
+  };
+  const handleButtonClickArtwork = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
 
@@ -140,7 +140,7 @@ const Home = () => {
     setTimeout(() => {
       navigate('/artwork'); // Navigate to the given URL
     }, 1000);
-  }; 
+  };
 
   return (
     <>
@@ -151,21 +151,21 @@ const Home = () => {
           <p>WELCOME TO</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <a href="/exh/medievals" onClick={handleButtonClickUpload} className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Contribute</a>
+          <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
         </div>
       </div>
 
       <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
       <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
@@ -214,8 +214,8 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Echoes of the Middle Ages: A Journey Through Medieval Times</h1>
               <p className="text-[13px] font-sans leading-6">A captivating exhibition that brings the medieval era to life through art, showcasing the grandeur, mystique, and daily life of the Middle Ages across various artistic forms.</p>
               <div className="py-6">
-                <button 
-                  onClick={handleButtonClickMedieval} 
+                <button
+                  onClick={handleButtonClickMedieval}
                   className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
                 >See More</button>
               </div>
@@ -230,8 +230,8 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Heritage Threads of Perfrections: The Elegance of Batik</h1>
               <p className="text-[13px] font-sans leading-6">Step into a world where tradition meets artistry, showcasing the intricate significance of batik, a timeless craft that weaves stories through its exquisite patterns.</p>
               <div className="py-6">
-                <button 
-                  onClick={handleButtonClickMedieval} 
+                <button
+                  onClick={handleButtonClickMedieval}
                   className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
                 >See More</button>
               </div>
@@ -246,8 +246,8 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Serenity Graces: Women Perception in Art and History</h1>
               <p className="text-[13px] font-sans leading-6">Discover the profound beauty and influence of women through the ages, where diverse and powerful roles women had resilience that define the feminine spirit</p>
               <div className="py-6">
-                <button 
-                  onClick={handleButtonClickMedieval} 
+                <button
+                  onClick={handleButtonClickMedieval}
                   className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
                 >See More</button>
               </div>
@@ -262,8 +262,8 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">A Quiet Resignation to the Darkness of Night, Volume II</h1>
               <p className="text-[13px] font-sans leading-6">A prequel to the previous work. Immerse yourself in the enigmatic allure of night, delves into themes of solitude, mystery, and the quiet beauty found in the shadows.</p>
               <div className="py-6">
-                <button 
-                  onClick={handleButtonClickMedieval} 
+                <button
+                  onClick={handleButtonClickMedieval}
                   className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
                 >See More</button>
               </div>
@@ -278,8 +278,8 @@ const Home = () => {
               <h1 className="text-[22px] font-medium py-5">Veiled Whispers: Youth Reflections of Worries on Uncertainty Futures</h1>
               <p className="text-[13px] font-sans leading-6">Explore the hidden anxieties and silent fears of today’s youth, captures the unspoken concerns of young minds through artworks, offering a poignant glimpse into their hopes.</p>
               <div className="py-6">
-                <button 
-                  onClick={handleButtonClickMedieval} 
+                <button
+                  onClick={handleButtonClickMedieval}
                   className="text-[14px] text-yellow-600 font-sans font-semibold border-2 border-yellow-600 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease"
                 >See More</button>
               </div>
@@ -386,8 +386,8 @@ const Home = () => {
         <div className="w-full h-full pt-10 pb-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
             <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
-            <button 
-              onClick={handleButtonClickCollection} 
+            <button
+              onClick={handleButtonClickCollection}
               className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden"
             >
               <p className="pr-2 group-hover:pr-5 group-hover:text-yellow-500 transition-all duration-300">
