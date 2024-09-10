@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -78,7 +78,7 @@ const Medieval = () => {
   const handleButtonClick = (e) => {
     e.preventDefault();
     setIsOverlayVisible(!isOverlayVisible);
-  };  
+  };
 
   return (
     <div className="min-h-screen text-white flex flex-col items-center">
@@ -94,29 +94,29 @@ const Medieval = () => {
       </div>
 
       <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
-      <div className='flex max-w-[80vw] flex-col sm:flex-row'> 
+      <div className='flex max-w-[80vw] flex-col sm:flex-row'>
         <div className="text-justify mb-8 ">
-            <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition presents</p>
+          <p className="text-[14px] font-sans font-medium text-zinc-500">Fusion Exhibition presents</p>
           <h1 className='text-3xl sm:text-5xl py-2 font-fluro tracking-normal font-bold'>An Artistic Journey Through Medieval Times</h1>
           <p className="text-base sm:text-xl font-neue mt-3 leading-8">
-          Castles, knights, battles, and imaginary creatures of the Middle Ages perpetually 
-          inspire art, literature, photography, film, and reenactment. These later fantasy works 
-          blend historical source material with legendary or magical elements to create memorable 
-          characters, creatures, and cultures. This exhibition explores the ways in which the Middle 
-          Ages have been mythologized, dramatized, and re-envisioned time and again, proving an 
-          irresistible period for creative reinterpretations ranging like Game of Thrones.</p>
+            Castles, knights, battles, and imaginary creatures of the Middle Ages perpetually
+            inspire art, literature, photography, film, and reenactment. These later fantasy works
+            blend historical source material with legendary or magical elements to create memorable
+            characters, creatures, and cultures. This exhibition explores the ways in which the Middle
+            Ages have been mythologized, dramatized, and re-envisioned time and again, proving an
+            irresistible period for creative reinterpretations ranging like Game of Thrones.</p>
         </div>
         <div className="border border-white border-solid p-8 sm:min-w-[20vw] sm:ml-16 mt-4 rounded-sm  text-white max-w-xs">
           <h1 className="text-lg mb-1">Exhibition's Period:</h1>
@@ -128,11 +128,11 @@ const Medieval = () => {
             <a className="underline tracking-widest font-light mt-16">Hundred Years' War</a>
             <a className="underline tracking-widest font-light mt-16">Treaty of Verdun</a>
           </ul>
-        <div className="flex mt-5">
+          <div className="flex mt-5">
             <a to="" className="text-[14px] text-neutral-300 font-sans font-semibold border-2 w-full text-center border-neutral-300 px-4 py-2 rounded-md hover:bg-neutral-200  hover:text-black duration-300 ease">
               Support the Exhibition
             </a>
-        </div>  
+          </div>
         </div>
 
       </div>
@@ -147,10 +147,10 @@ const Medieval = () => {
               Explore the diverse and enchanting landscapes, cultures,<br />
               and experiences that Middle Ages has to offer.
             </p>
-            <a href="#" onClick={openModal}  className="inline-block bg-white text-black font-semibold p-5 rounded-full hover:bg-gray-300 transition">
-            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16.6582 9.28638C18.098 10.1862 18.8178 10.6361 19.0647 11.2122C19.2803 11.7152 19.2803 12.2847 19.0647 12.7878C18.8178 13.3638 18.098 13.8137 16.6582 14.7136L9.896 18.94C8.29805 19.9387 7.49907 20.4381 6.83973 20.385C6.26501 20.3388 5.73818 20.0469 5.3944 19.584C5 19.053 5 18.1108 5 16.2264V7.77357C5 5.88919 5 4.94701 5.3944 4.41598C5.73818 3.9531 6.26501 3.66111 6.83973 3.6149C7.49907 3.5619 8.29805 4.06126 9.896 5.05998L16.6582 9.28638Z" stroke="#000000" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
+            <a href="#" onClick={openModal} className="inline-block bg-white text-black font-semibold p-5 rounded-full hover:bg-gray-300 transition">
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6582 9.28638C18.098 10.1862 18.8178 10.6361 19.0647 11.2122C19.2803 11.7152 19.2803 12.2847 19.0647 12.7878C18.8178 13.3638 18.098 13.8137 16.6582 14.7136L9.896 18.94C8.29805 19.9387 7.49907 20.4381 6.83973 20.385C6.26501 20.3388 5.73818 20.0469 5.3944 19.584C5 19.053 5 18.1108 5 16.2264V7.77357C5 5.88919 5 4.94701 5.3944 4.41598C5.73818 3.9531 6.26501 3.66111 6.83973 3.6149C7.49907 3.5619 8.29805 4.06126 9.896 5.05998L16.6582 9.28638Z" stroke="#000000" strokeWidth="2" strokeLinejoin="round" />
+              </svg>
             </a>
           </div>
         </div>
@@ -159,22 +159,22 @@ const Medieval = () => {
       {/* AnimatePresence for smooth exit animations */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 flex items-center justify-center z-20 bg-black bg-opacity-75"
             initial={{ opacity: 0 }} // Animation when opening
             animate={{ opacity: 1 }}  // Animation when opened
             exit={{ opacity: 0 }}     // Animation when closing
             transition={{ duration: 0.3 }}  // Speed of animation
           >
-            <motion.div 
+            <motion.div
               className="rounded-lg max-w-[80vw] relative"
               initial={{ scale: 0.5, opacity: 0 }} // Starting scale and opacity
               animate={{ scale: 1, opacity: 1 }}   // Ending scale and opacity
               exit={{ scale: 0.5, opacity: 0 }}    // Exit animation for closing
               transition={{ duration: 0.3 }}       // Animation duration
             >
-              <button 
-                onClick={closeModal} 
+              <button
+                onClick={closeModal}
                 className="absolute top-0 right-0 m-4 text-gray-100 p-3 bg-neutral-900 rounded-full hover:bg-neutral-700 duration-300 ease-in-out"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -285,7 +285,7 @@ const Medieval = () => {
               </div>
             </div>
 
-            </div>
+          </div>
         </div>
 
         {/* Framer Motion Popup */}
@@ -298,7 +298,7 @@ const Medieval = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              
+
               <motion.img
                 src={selectedImage}
                 className="max-w-[80vw] max-h-[80vh] object-contain rounded-xl"
@@ -306,8 +306,8 @@ const Medieval = () => {
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}
               />
-              <button 
-                onClick={closeModal} 
+              <button
+                onClick={closeModal}
                 className="absolute top-0 right-0 m-4 text-gray-100 p-3 bg-neutral-900 rounded-full hover:bg-neutral-700 duration-300 ease-in-out"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -341,7 +341,7 @@ const Medieval = () => {
       </div>
 
       <Footer></Footer>
-      
+
     </div>
   );
 }
