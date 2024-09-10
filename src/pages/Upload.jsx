@@ -88,7 +88,7 @@ const Upload = () => {
                         <label className="block text-sm font-medium text-gray-300">Description</label>
                         <textarea required className="mt-2 block w-full p-2 bg-neutral-600 text-white rounded-md focus:outline-none focus:border-yellow-500 placeholder:italic placeholder:font-normal placeholder:text-neutral-400" placeholder="Tell us the story behind this creation. What inspired it?"></textarea>
                     </div>
-                    <button type="submit" className="w-full py-2 px-4 bg-yellow-500 col-span-2 text-white font-semibold rounded-md shadow-lg shadow-yellow-500 hover:outline-none  focus:outline-none">
+                    <button type="submit" className="mt-5 w-full py-2 px-4 bg-yellow-500 col-span-2 text-white font-semibold rounded-md shadow-lg shadow-yellow-500 hover:outline-none  focus:outline-none">
                         Upload
                     </button>
                 </form>

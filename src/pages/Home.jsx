@@ -92,7 +92,7 @@ const Home = () => {
           default:
             start = 0;
         }
-        countUp(stat, start, target, 1000); // 8000ms = 8 seconds for all
+        countUp(stat, start, target, 2000); // 8000ms = 8 seconds for all
       });
     }
   }, [startCounting]);
@@ -148,7 +148,7 @@ const Home = () => {
       <div className="w-full h-[100vh] bg-[url('/assets/hero-home.jpg')] bg-cover bg-center relative z-[1]">
         <div className="absolute w-full h-[100vh] bg-gradient-to-b from-[rgba(0,0,0,0.35)] to-[#242424] opacity-100 z-[2]"></div>
         <div className="relative w-full h-[100vh] flex flex-col justify-center items-center z-10 text-white">
-          <p>WELCOME TO</p>
+          <p>WELCOME</p>
           <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
           <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
