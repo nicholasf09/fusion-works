@@ -4,8 +4,19 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import './transition.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 2000,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   const artworks = [
     { title: "THE STARRY NIGHT", link: "/", image: "/assets/thestarrynight.jpg", creator: "VAN GOGH" },
     { title: "THE NIGHT WE MET", link: "/", image: "/assets/thenightwemet.jpeg", creator: "LORD HURON" },
@@ -159,11 +170,11 @@ const Home = () => {
       <Navbar></Navbar>
       <div className="w-full h-[100vh] bg-[url('/assets/hero-home.jpg')] bg-cover bg-center relative z-[1]">
         <div className="absolute w-full h-[100vh] bg-gradient-to-b from-[rgba(0,0,0,0.35)] to-[#242424] opacity-100 z-[2]"></div>
-        <div className="relative w-full h-[100vh] flex flex-col justify-center items-center z-10 text-white">
-          <p>WELCOME</p>
-          <h1 className="text-[100px] font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0">FusionWorks</h1>
-          <p className="text-center w-1/4 max-[991px]:w-2/4 max-md:w-3/4 max-md:text-[15px]">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
-          <a href="#exhibition" className="mt-8 border-2 px-8 py-2 rounded-[30px] hover:bg-white hover:text-black duration-300 ease">Explore</a>
+        <div className="relative w-full h-[100vh] flex flex-col justify-center items-center z-10 text-orange-100">
+          <p className="text-orange-100" data-aos="zoom-in-down">WELCOME</p>
+          <h1 className="text-[100px] text-orange-100 font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0" data-aos="zoom-in">Fusion Works</h1>
+          <p className="text-center w-1/4 max-[991px]:w-2/4 text-orange-100 max-md:w-3/4 max-md:text-[15px]" data-aos="zoom-in">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
+          <a href="#exhibition" className="mt-8 border-2 border-orange-100  px-8 py-2 rounded-[30px] hover:bg-orange-100 hover:text-black duration-500 ease" data-aos="zoom-in-up">Explore</a>
         </div>
       </div>
 
@@ -182,16 +193,16 @@ const Home = () => {
 
       <div className="w-full h-full py-[80px] max-md:py-[40px]" id="exhibition">
         <div className="w-full flex">
-          <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:hidden" />
+          <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:hidden" data-aos="fade-right" />
           <div className="w-4/6 flex flex-col justify-center max-[991px]:w-10/12">
-            <p className="text-zinc-500 pl-10 pb-2 text-[16px] overflow-hidden max-[540px]:text-[15px] max-[540px]:pr-5">Diverse Perspectives: One Unified Canvas</p>
-            <h1 className="text-yellow-600 pl-10 text-5xl overflow-hidden font-semibold max-[540px]:text-4xl max-[540px]:pr-5">Exhibition</h1>
+            <p className="text-zinc-500 pl-10 pb-2 text-[16px] overflow-hidden max-[540px]:text-[15px] max-[540px]:pr-5" data-aos="fade-down" data-aos-duration="500">Diverse Perspectives: One Unified Canvas</p>
+            <h1 className="text-yellow-600 pl-10 text-5xl overflow-hidden font-semibold max-[540px]:text-4xl max-[540px]:pr-5 z-50" data-aos="fade-down" data-aos-duration="500" >Exhibition</h1>
           </div>
-          <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:w-2/12" />
+          <hr className="w-1/6 h-[1px] my-8 bg-gray-200 border-[1px] border-zinc-600 max-[991px]:w-1/12 max-[540px]:w-2/12" data-aos="fade-left" />
         </div>
       </div>
 
-      <div className="w-full h-full font-serif">
+      <div className="w-full h-full font-serif" data-aos="fade-up" data-aos-duration="500">
         <swiper-container
           navigation-next-el=".custom-next-button"
           navigation-prev-el=".custom-prev-button"
@@ -299,7 +310,7 @@ const Home = () => {
           </swiper-slide>
         </swiper-container>
 
-        <div className="flex justify-center text-white mb-10 mt-[-50px] max-md:mt-[-60px]">
+        <div className="flex justify-center text-amber-50 mb-10 mt-[-50px] max-md:mt-[-60px]">
           <div className="custom-prev-button text-yellow-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
           </svg></div>
@@ -310,15 +321,15 @@ const Home = () => {
         </div>
       </div >
 
-      <div className="w-full h-full text-white px-[180px] py-10 max-xl:px-20 max-md:px-6">
-        <p className="text-zinc-500 pb-2">Today&apos;s Highlights</p>
-        <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold border-b-2 border-zinc-600 pb-6 max-md:text-4xl">Art in Focus</h1>
+      <div className="w-full h-full text-amber-50 px-[180px] py-10 max-xl:px-20 max-md:px-6">
+        <p className="text-zinc-500 pb-2" data-aos="fade-down" data-aos-duration="500">Today&apos;s Highlights</p>
+        <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold border-b-2 border-zinc-600 pb-6 max-md:text-4xl" data-aos="fade-down" data-aos-duration="500">Art in Focus</h1>
         <div
-          className="bg-[url('/assets/background-highlights.png')] bg-cover bg-center h-full shadow-custom text-white mt-10"
+          className="bg-[url('/assets/background-highlights.png')] bg-cover bg-center h-full shadow-custom text-amber-50 mt-10" 
         >
           <div className="w-full h-full bg-[rgba(0,0,0,0.7)] flex max-[991px]:flex-col-reverse py-20 max-[991px]:py-10 px-10 max-[991px]:px-5 items-center">
             <div className="w-2/4 h-full flex flex-col items-end pr-10 max-[991px]:w-3/4 max-[991px]:pr-0 max-[991px]:items-center max-md:w-full">
-              <h1 className="text-5xl font-thin overflow-hidden max-md:text-3xl">{`${artworks[activeIndex].creator}`}</h1>
+              <h1 className="text-5xl font-thin overflow-hidden max-md:text-3xl" >{`${artworks[activeIndex].creator}`}</h1>
               <div>
                 <img
                   src={artworks[activeIndex].image}
@@ -327,7 +338,7 @@ const Home = () => {
                 />
                 <button
                   onClick={handleButtonClickArtwork}
-                  className="mt-5 text-[14px] flex bg-yellow-600 text-white font-sans font-semibold border-2 border-yellow-800 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease w-fit"
+                  className="mt-5 text-[14px] flex bg-yellow-600 text-amber-50 font-sans font-semibold border-2 border-yellow-800 px-4 py-2 hover:bg-yellow-500 hover:text-black duration-300 ease w-fit"
                 >
                   See the Art
                   <svg
@@ -351,7 +362,7 @@ const Home = () => {
               <h1 className="text-md font-medium overflow-hidden text-zinc-400 flex mb-2 max-[991px]:mb-7 max-[991px]:justify-center max-md:justify-start">CLICK TO VIEW ART <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-down pl-2" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
               </svg></h1>
-              <ul className="text-3xl max-[991px]:flex max-[991px]:justify-center max-[991px]:text-xl max-[991px]:flex-wrap max-[991px]:gap-x-5 max-[991px]:mb-10 max-md:flex-nowrap max-md:flex-col max-md:justify-start">
+              <ul className="text-3xl max-[991px]:flex max-[991px]:justify-center max-[991px]:text-xl max-[991px]:flex-wrap max-[991px]:gap-x-5 max-[991px]:mb-10 max-md:flex-nowrap max-md:flex-col max-md:justify-start" data-aos-duration="1200" data-aos="fade-left">
                 {artworks.map((item, index) => (
                   <li
                     key={index}
@@ -370,24 +381,24 @@ const Home = () => {
         </div>
       </div>
 
-      <div ref={sectionRef} className="w-full h-full my-10 text-white flex py-10 justify-evenly px-20 max-md:px-5 max-sm:flex-col max-sm:my-5 max-sm:py-0">
+      <div ref={sectionRef} className="w-full h-full my-10 text-amber-50 flex py-10 justify-evenly px-20 max-md:px-5 max-sm:flex-col max-sm:my-5 max-sm:py-0">
         <div className="flex items-center max-sm:py-5">
-          <img src="assets/artwork.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
-          <div className="ml-5">
+          <img src="assets/artwork.svg" alt="" className="w-[60px] max-sm:w-[50px]" data-aos-duration="1200" data-aos="zoom-in"/>
+          <div className="ml-5" data-aos-duration="1200" data-aos="zoom-in">
             <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="500">0</h1>
             <p className="text-zinc-400 font-medium">Artworks</p>
           </div>
         </div>
         <div className="flex items-center max-sm:py-5">
-          <img src="assets/artist.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
-          <div className="ml-5">
+          <img src="assets/artist.svg" alt="" className="w-[60px] max-sm:w-[50px]" data-aos-duration="1200" data-aos="zoom-in"/>
+          <div className="ml-5" data-aos-duration="1200" data-aos="zoom-in">
             <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="60">0</h1>
             <p className="text-zinc-400 font-medium">Artists</p>
           </div>
         </div>
         <div className="flex items-center max-sm:py-5">
-          <img src="assets/collicon.svg" alt="" className="w-[60px] max-sm:w-[50px]" />
-          <div className="ml-5">
+          <img src="assets/collicon.svg" alt="" className="w-[60px] max-sm:w-[50px]" data-aos-duration="1200" data-aos="zoom-in"/>
+          <div className="ml-5" data-aos-duration="1200" data-aos="zoom-in">
             <h1 className="text-3xl overflow-y-hidden py-1 font-semibold font-neue text-yellow-600 count max-sm:text-2xl" data-target="20">0</h1>
             <p className="text-zinc-400 font-medium">Collections</p>
           </div>
@@ -395,9 +406,9 @@ const Home = () => {
       </div >
 
       <div className="w-full h-full">
-        <div className="w-full h-full pt-10 pb-20 px-[180px] text-white max-xl:px-20 max-md:px-6">
+        <div className="w-full h-full pt-10 pb-20 px-[180px] text-amber-50 max-xl:px-20 max-md:px-6">
           <div className="flex justify-between border-b-2 border-zinc-600 pb-6 items-center">
-            <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl">Collection</h1>
+            <h1 className="text-yellow-600 text-5xl overflow-hidden font-semibold max-md:text-3xl"  data-aos="zoom-in" data-aos-duration="500">Collection</h1>
             <button
               onClick={handleButtonClickCollection}
               className="flex items-center mr-2 group hover:mr-0 transition-all duration-300 max-[540px]:hidden"
@@ -412,34 +423,34 @@ const Home = () => {
           </div >
           <div className="py-6">
             <p className="text-zinc-400 w-3/4 pb-6 max-[991px]:w-full">Our collection currently contains more than 1,000 artworks from different perspectives, offering a diverse and rich exploration of creativity across the globe.</p>
-            <div className="grid grid-cols-12 grid-rows-6 gap-x-4 gap-y-4 h-[600px] max-xl:h-[450px] max-[991px]:grid-cols-2 max-[991px]:grid-rows-3 max-[991px]:h-[600px] max-[540px]:grid-cols-1 max-[540px]:grid-rows-6 max-[540px]:h-[1200px]">
-              <div className="col-span-3 row-span-6 bg-black w-full h-full bg-[url('/assets/photograph.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+            <div className="grid grid-cols-12 grid-rows-6 gap-x-4 gap-y-4 h-[600px] max-xl:h-[450px] max-[991px]:grid-cols-2 max-[991px]:grid-rows-3 max-[991px]:h-[600px] max-[540px]:grid-cols-1 max-[540px]:grid-rows-6 max-[540px]:h-[1200px] overflow-hidden">
+              <div className="col-span-3 row-span-6 bg-black w-full h-full bg-[url('/assets/photograph.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center" data-aos-duration="1200" data-aos="zoom-in-right">
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Photographs</h1>
                 </div>
               </div>
-              <div className="col-span-5 row-span-4 bg-black w-full h-full bg-[url('/assets/painting.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+              <div className="col-span-5 row-span-4 bg-black w-full h-full bg-[url('/assets/painting.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1" data-aos-duration="1200" data-aos="zoom-in-down">
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Paintings</h1>
                 </div>
               </div>
-              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/vectors.png')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/vectors.png')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1" data-aos-duration="1200" data-aos="zoom-in-left">
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Vectors</h1>
                 </div>
               </div>
-              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/3dmodel.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+              <div className="col-span-4 row-span-3 bg-black w-full h-full bg-[url('/assets/3dmodel.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-center" data-aos-duration="1200" data-aos="zoom-in-left">
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">3D Models</h1>
                 </div>
               </div>
-              <div className="col-span-2 row-span-2 bg-black w-full h-full bg-[url('/assets/music.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-bottom">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+              <div className="col-span-2 row-span-2 bg-black w-full h-full bg-[url('/assets/music.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1 bg-bottom" data-aos-duration="500" data-aos="zoom-in-up">
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Musics</h1>
                 </div>
               </div>
-              <div className="col-span-3 row-span-2 bg-black w-full h-full bg-[url('/assets/videos.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1">
-                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-white opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
+              <div className="col-span-3 row-span-2 bg-black w-full h-full bg-[url('/assets/videos.jpg')] bg-cover max-[991px]:col-span-1 max-[991px]:row-span-1" data-aos-duration="500" data-aos="zoom-in-up"> 
+                <div className="w-full h-full flex flex-col justify-end hover:bg-black/50 p-5 text-amber-50 opacity-0 hover:opacity-100 hover:cursor-pointer transition-opacity ease duration-500">
                   <h1 className="font-bold">Videos</h1>
                 </div>
               </div>
