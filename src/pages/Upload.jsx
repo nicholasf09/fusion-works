@@ -13,7 +13,7 @@ const Upload = () => {
     };
 
     useEffect(() => {
-    setIsOverlayVisible(true);
+        setIsOverlayVisible(true);
     }, []);
 
     return (
@@ -30,7 +30,7 @@ const Upload = () => {
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
-            <div className="w-xl h-2/12 p-10 bg-neutral-800 rounded-xl shadow-lg">
+            <div className="w-[80%] h-2/12 p-10 bg-neutral-800 rounded-xl shadow-lg max-md:w-[95%]">
                 <h2 className="text-2xl font-bold text-white text-center mb-6">UPLOAD YOUR WORKS</h2>
                 <p className="text-lg text-gray-300 text-center mb-6">Art is not what you see, but what you make others see</p>
                 <form onSubmit={handleSubmit} className="md:gap-5 grid max-md:grid-cols-1 grid-cols-2">
@@ -53,8 +53,8 @@ const Upload = () => {
                     <div className='max-md:col-span-2'>
                         <label className="block text-sm font-medium text-gray-300">Type of Art</label>
                         <select
-                            value={artworkType} 
-                            onChange={(e) => setArtworkType(e.target.value)} 
+                            value={artworkType}
+                            onChange={(e) => setArtworkType(e.target.value)}
                             className="mt-2 block w-full p-2 h-12 bg-neutral-600 text-white rounded-md focus:outline-none focus:border-yellow-500 placeholder:italic placeholder:font-normal placeholder:text-neutral-400"
                         >
                             <option value="Painting">Painting (img)</option>

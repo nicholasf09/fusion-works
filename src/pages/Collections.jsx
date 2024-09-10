@@ -6,7 +6,7 @@ import DropdownComponent from '../components/DropdownComponent';
 import "./transition.css";
 
 const Collections = () => {
-  
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -58,16 +58,16 @@ const Collections = () => {
       </div>
 
       <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
 
       <div className='w-full mt-10'>
@@ -82,7 +82,7 @@ const Collections = () => {
         <DropdownComponent
           uniqueId="2"
           BigTitle="Vectors"
-          BigDesc="Explore our collection of classic and contemporary paintings."
+          BigDesc="Crisp and scalable graphics, ideal for logos, icons, and illustrations, providing clarity at any size without pixelation."
           bgImage="/assets/vectors.png"
           Title="Dusk and Dusty"
           Desc="Frank Stellar"
@@ -90,7 +90,7 @@ const Collections = () => {
         <DropdownComponent
           uniqueId="3"
           BigTitle="Photography"
-          BigDesc="Explore our collection of classic and contemporary paintings."
+          BigDesc="Capturing real-life moments with high-resolution imagery, showcasing textures, emotions, and colors in stunning detail."
           bgImage="/assets/photograph.jpg"
           Title="Amur Tigress"
           Desc="Sergey Gorshkov"
@@ -99,7 +99,7 @@ const Collections = () => {
         <DropdownComponent
           uniqueId="4"
           BigTitle="Videos"
-          BigDesc="Explore our collection of classic and contemporary paintings."
+          BigDesc="Dynamic visual storytelling, blending motion and sound to create engaging content for entertainment, education, and advertising."
           bgImage="/assets/video-coll.jpg"
           Title="Walter White | Heisenberg"
           Desc="Ilia TS"
@@ -107,7 +107,7 @@ const Collections = () => {
         <DropdownComponent
           uniqueId="5"
           BigTitle="Musics"
-          BigDesc="Explore our collection of classic and contemporary paintings."
+          BigDesc="An auditory experience, conveying emotion, energy, and ambiance through rhythm, melody, and harmonies across various genres."
           bgImage="/assets/thenightwemet.jpeg"
           Title="The Night We Met"
           Desc="Lord Huron"
@@ -115,7 +115,7 @@ const Collections = () => {
         <DropdownComponent
           uniqueId="6"
           BigTitle="3D Models"
-          BigDesc="Explore our collection of classic and contemporary paintings."
+          BigDesc="Immersive, lifelike representations of objects, environments, or characters, offering a 360-degree view for design, animation, or virtual reality."
           bgImage="/assets/3dmodel.jpg"
           Title="Ayla"
           Desc="Gyu Bin Yun"
