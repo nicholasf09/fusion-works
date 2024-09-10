@@ -102,7 +102,19 @@ const Home = () => {
 
   // Trigger the overlay to be visible on initial load
   useEffect(() => {
-    setIsOverlayVisible(true);
+    const handleLoad = () => {
+      setIsOverlayVisible(true);
+    };
+
+    if (document.readyState === "complete") {
+      // If the page is already loaded, trigger the overlay immediately
+      handleLoad();
+    } else {
+      // Otherwise, wait for the load event
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   const handleButtonClickCollection = (e) => {
