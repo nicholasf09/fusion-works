@@ -10,10 +10,10 @@ const Navbar = () => {
 
         const handleMenuToggle = () => {
             menuToggle.classList.toggle('bg-white/10');
-            if (menu.style.height === '248px') {
+            if (menu.style.height === '180px') {
                 menu.style.height = '0px';
             } else {
-                menu.style.height = '248px';
+                menu.style.height = '180px';
             }
         };
 
@@ -41,11 +41,6 @@ const Navbar = () => {
                     <Link to="/" className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
                         <li className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
                             Home
-                        </li>
-                    </Link>
-                    <Link to="/" className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
-                        <li className="relative after:block after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 group-hover:after:w-full max-md:after:hidden max-xl:text-[15px] max-md:overflow-y-hidden">
-                            About
                         </li>
                     </Link>
                     <Link to="/collections" className="pl-5 pr-10 max-md:pr-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">

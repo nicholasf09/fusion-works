@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
-import CollectionCard from './CollectionCard'; // Assuming CollectionCard is in the same folder
 
 const DropdownComponent = (props) => {
-    const { BigTitle, BigDesc, bgImage, Title, Desc, uniqueId } = props;
+    const { BigTitle, BigDesc, children, uniqueId } = props;
 
     const [isDropdownActive, setIsDropdownActive] = useState(uniqueId === "1");
 
@@ -64,36 +63,7 @@ const DropdownComponent = (props) => {
             <div id={`collections-${uniqueId}`} className="overflow-y-hidden h-0">
                 <p className="mt-5 text-zinc-400">{BigDesc}</p>
                 <div className="w-full h-fit grid grid-cols-2 gap-4 py-10 text-white max-md:grid-cols-1">
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
-                    <CollectionCard
-                        bgImage={bgImage}
-                        Title={Title}
-                        Desc={Desc}
-                    />
+                    {children}
                 </div>
             </div>
         </div>
