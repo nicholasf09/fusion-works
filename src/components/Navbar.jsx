@@ -3,23 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const [navbarBg, setNavbarBg] = useState("bg-transparent");
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 60) {
-                setNavbarBg("bg-zinc-800");
-            } else {
-                setNavbarBg("bg-transparent");
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
     useEffect(() => {
         const menuToggle = document.getElementById('menu-toggle');
@@ -43,8 +26,16 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div id="navbar" className={`w-full fixed top-0 left-0 h-[60px] flex justify-between items-center px-[60px] max-md:px-8 text-white overflow-hidden z-[999] transition-colors duration-300 ${navbarBg}`}>
-            <h1 className="text-xl font-bold max-xl:text-lg">FusionWorks</h1>
+        <>
+        <div className={`w-full flex content-center justify-center h-12`}>
+            <div className="flex">
+                <svg viewBox="0 0 24 24"  width={15} fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V12H9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#c1b5a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                <h1 className="text-orange-100 mx-2 text-xs my-auto font-neue opacity-75 tracking-wider">Next exhibition phase will be available on 08/09</h1>
+                <svg viewBox="0 0 24 24"  width={15} fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V12H9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#c1b5a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+        </div>
+        <div id="navbar" className={`w-full absolute text-orange-50 mt-12 top-0 left-0 h-[80px] flex justify-between items-center px-[60px] max-md:px-8  overflow-hidden z-[999] transition-colors duration-300 border-orange-100 border-y-[1px] border-opacity-30 `}>
+            <h1 className="text-xl  font-bold max-xl:text-lg">FusionWorks</h1>
             <div id="menu" className="flex items-center max-md:flex-col max-md:fixed max-md:top-[60px] max-md:left-0 max-md:z-[999] max-md:w-full max-md:h-[0px] max-md:overflow-y-hidden transition-height duration-300 ease-in-out max-md:px-5">
                 <ul className="flex items-center h-[60px] max-md:flex-col max-md:bg-black/80 max-md:h-full max-md:w-full max-md:rounded-[20px] max-md:mt-2 max-md:overflow-y-hidden">
                     <Link to="/" className="px-5 group max-md:w-full max-md:h-[60px] max-md:flex max-md:justify-center max-md:items-center max-md:active:bg-slate-800/50 rounded-t-[20px]">
@@ -74,7 +65,7 @@ const Navbar = () => {
             </div>
         </div>
 
-
+        </>
     );
 };
 
