@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './transition.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Artwork() {
 
@@ -19,35 +20,113 @@ function Artwork() {
     window.scrollTo(0, 0);
   }, []);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("/assets/thestarrynight.jpg");
+
+  const openModal = (e) => {
+    e.preventDefault(); // Prevent default behavior
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <Navbar></Navbar>
 
       <div className={`overlay ${isOverlayVisible ? '' : 'show'}`}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
       <div className='w-full h-full bg-[url("/assets/background-highlights.png")] bg-cover bg-center text-white'>
         <div className='w-full h-full bg-black/70 pt-20 flex justify-center items-center flex-col'>
-          <img src="/assets/thestarrynight.jpg" alt="" className='w-[600px] max-sm:w-[300px]' />
+          <img
+            id='artworkImg'
+            src={selectedImage}
+            alt=''
+            className='w-[600px] max-sm:w-[300px] cursor-pointer'
+            onClick={openModal}
+          />
           <div className='w-full px-20 py-10 flex justify-between items-center max-sm:px-5'>
-            <h1 className='max-sm:text-[14px] max-sm:w-[50%]'>CCO Public Domain Designation</h1>
-            <div className='flex gap-4 max-sm:gap-2 items-center'>
-              <img src="/assets/expand.svg" alt="" className='w-[36px] cursor-pointer hover:bg-[#242424] p-2' />
-              <img src="/assets/download.svg" alt="" className='w-[36px] cursor-pointer hover:bg-[#242424] p-2' />
-              <img src="/assets/share.svg" alt="" className='w-[36px] cursor-pointer hover:bg-[#242424] p-2' />
+            <h1 className='max-sm:text-[14px] max-sm:w-[50%]'>
+              CCO Public Domain Designation
+            </h1>
+            <div
+              className='flex gap-4 max-sm:gap-2 items-center cursor-pointer'
+            >
+              <img
+                id='expand'
+                src='/assets/expand.svg'
+                alt=''
+                className='w-[36px] cursor-pointer hover:bg-[#242424] p-2'
+                onClick={openModal}
+              />
+              <img
+                src='/assets/download.svg'
+                alt=''
+                className='w-[36px] cursor-pointer hover:bg-[#242424] p-2'
+              />
+              <img
+                src='/assets/share.svg'
+                alt=''
+                className='w-[36px] cursor-pointer hover:bg-[#242424] p-2'
+              />
             </div>
           </div>
         </div>
+
+        {/* Framer Motion Popup */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[1000]"
+              onClick={closeModal}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.img
+                src={selectedImage}
+                className="max-w-[80vw] max-h-[80vh] object-contain rounded-xl"
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+              />
+              <button
+                onClick={closeModal}
+                className="absolute top-0 right-0 m-4 text-gray-100 p-3 bg-neutral-900 rounded-full hover:bg-neutral-700 duration-300 ease-in-out"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className='w-full h-full text-white py-10 px-10 flex max-md:flex-col'>
