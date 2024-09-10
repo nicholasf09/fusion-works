@@ -160,7 +160,7 @@ const Home = () => {
         <div className="absolute w-full h-[100vh] bg-gradient-to-b from-[rgba(0,0,0,0.35)] to-[#242424] opacity-100 z-[2]"></div>
         <div className="relative w-full h-[100vh] flex flex-col justify-center items-center z-10 text-orange-100">
           <p className="text-orange-100" data-aos="zoom-in-down">WELCOME</p>
-          <h1 className="text-[100px] text-orange-100 font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0" data-aos="zoom-in">Fusion Works</h1>
+          <h1 className="text-[100px] text-orange-100 font-bold overflow-hidden mt-[-25px] max-md:text-[80px] max-md:mt-[-15px] max-[540px]:text-[50px] max-[540px]:mt-0" data-aos="zoom-in">FusionWorks</h1>
           <p className="text-center w-1/4 max-[991px]:w-2/4 text-orange-100 max-md:w-3/4 max-md:text-[15px]" data-aos="zoom-in">Bridging Worlds through Merging Masterpieces, A Unified Canvas of Diverse Perspectives.</p>
           <a href="#exhibition" className="mt-8 border-2 border-orange-100  px-8 py-2 rounded-[30px] hover:bg-orange-100 hover:text-black duration-500 ease" data-aos="zoom-in-up">Explore</a>
         </div>
