@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="w-full h-full flex items-center max-[991px]:flex-col">
                 <div className="w-2/5 h-full py-10 pr-20 border-r-[1px] max-[991px]:border-0 max-[991px]:w-full max-[991px]:pr-0">
                     <p className="text-md font-fluro font-bold mb-3">FusionWorks</p>
-                    <h1 className="text-3xl font-fluro font-bold leading-[40px] tracking-wide" data-aos-duration="1200" data-aos="fade-right">Where Art Meets Diversity, Creativity Unites.</h1>
+                    <h1 className="text-3xl font-fluro font-bold leading-[40px] tracking-wide">Where Art Meets Diversity, Creativity Unites.</h1>
                     <div className="flex gap-3 w-full mt-10 pt-10 border-t-[1px] overflow-hidden">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" /></svg>
