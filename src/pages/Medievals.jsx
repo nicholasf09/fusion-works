@@ -142,7 +142,7 @@ const Medieval = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-            <h1 className="text-2xl md:text-6xl font-fluro tracking-wide font-bold mb-4">Discover Medievals</h1>
+            <h1 className="text-2xl md:text-6xl font-fluro tracking-wide font-bold mb-4 overflow-y-hidden">Discover Medievals</h1>
             <p className="text-[10px] font-neue font-light sm:text-xl mb-8">
               Explore the diverse and enchanting landscapes, cultures,<br />
               and experiences that Middle Ages has to offer.
